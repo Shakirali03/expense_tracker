@@ -25,7 +25,7 @@ const balance = document.getElementById(
   //last 
   const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
   
-  let transactions = localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
+  let transactions = localStorage.getItem('transations') !== null ? localStorageTransactions : [];
   
   //5
   //Add Transaction
@@ -84,7 +84,7 @@ const balance = document.getElementById(
   //Update the balance income and expence
   function updateValues() {
     const amounts = transactions.map(
-      (transaction) => transaction.amount
+      transaction => transaction.amount
     );
     const total = amounts
       .reduce((acc, item) => (acc += item), 0)
